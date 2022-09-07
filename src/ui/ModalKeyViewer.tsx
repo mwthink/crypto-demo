@@ -14,7 +14,7 @@ export const ModalKeyViewer: React.FunctionComponent<{key_armored:string}> = pro
           <pre>{props.key_armored}</pre>
         </ModalBody>
         <ModalFooter>
-          <Button color="primary" onClick={toggle}>Thing</Button>
+          <Button color="danger" onClick={toggle}>Close</Button>
         </ModalFooter>
       </Modal>
     </div>
