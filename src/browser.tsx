@@ -13,5 +13,10 @@ root.render(
     <Row>
       <Col><App/></Col>
     </Row>
+    <Row>
+      <Col style={{textAlign: 'right'}}>
+        <a href="https://github.com/mwthink/crypto-demo"><sub>View on GitHub</sub></a>
+      </Col>
+    </Row>
   </Container>
 )

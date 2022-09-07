@@ -46,9 +46,9 @@ export class App extends React.Component<AppProps, AppState> {
         <div>
           <strong>Welcome to first-time setup!</strong><br/>
           Let's get started by generating a new keypair for your identity.<br/><br/>
-          <i>Notes: All key generation is happening on your computer. This app does not transmit or receive any data once loaded.</i>
+          <i>Notes: All key generation is happening on your computer. This app does not transmit or receive any data once loaded. All data is reset when the app is closed/refreshed.</i>
           <br/><br/>
-          <strong><i>This application is for demonstration purposes and should not be used for sensitive data</i></strong>
+          <strong><i>This application is for demonstration purposes and should not be used for sensitive data.</i></strong>
           <hr/>
           <KeyWizard onPrivateKey={private_key => {
             return openpgp.readKey({
