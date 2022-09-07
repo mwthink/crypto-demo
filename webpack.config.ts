@@ -8,7 +8,7 @@ const config: Configuration = {
   entry: Path.resolve(__dirname, 'src/browser.tsx'),
   output: {
     path: Path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    // publicPath: '/',
     filename: 'bundle.js',
   },
   resolve: {
