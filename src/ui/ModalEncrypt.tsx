@@ -25,7 +25,7 @@ export const ModalEncrypt: React.FunctionComponent<{key_armored:string}> = props
 
   return (
     <div>
-      <Button size="sm" onClick={toggle}>Encrypt</Button>
+      <Button size="sm" color="success" onClick={toggle}>Encrypt</Button>
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Encrypt Message w/ Public Key</ModalHeader>
         <ModalBody>

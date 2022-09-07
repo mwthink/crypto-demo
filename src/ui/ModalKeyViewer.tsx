@@ -7,7 +7,7 @@ export const ModalKeyViewer: React.FunctionComponent<{key_armored:string}> = pro
 
   return (
     <div>
-      <Button size="sm" color="info" onClick={toggle}>View Key</Button>
+      <Button size="sm" color="primary" onClick={toggle}>View Key</Button>
       <Modal isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Key Data</ModalHeader>
         <ModalBody>

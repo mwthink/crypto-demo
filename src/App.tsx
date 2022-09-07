@@ -6,6 +6,8 @@ import ModalKeyImport from './ui/ModalKeyImport';
 import ModalKeyViewer from './ui/ModalKeyViewer';
 import ModalEncrypt from './ui/ModalEncrypt';
 import ModalDecrypt from './ui/ModalDecrypt';
+import ModalSign from './ui/ModalSign';
+import ModalVerify from './ui/ModalVerify';
 import * as openpgp from 'openpgp';
 
 export interface AppProps {}
@@ -144,8 +146,13 @@ export class App extends React.Component<AppProps, AppState> {
                       <td>
                         <ModalKeyViewer key_armored={k.toPublic().armor()}/>
                         <ModalEncrypt key_armored={k.toPublic().armor()}/>
-                        {/** Only show Decrypt button if we have the private key */}
-                        {k.isPrivate() ? <ModalDecrypt key_armored={k.armor()}/> : null}
+                        <ModalVerify key_armored={k.armor()}/>
+                        {/** Only show these buttons button if we have the private key */}
+                        {!k.isPrivate() ? null : (<>
+                          <br/>
+                          <ModalSign key_armored={k.armor()}/>
+                          <ModalDecrypt key_armored={k.armor()}/>
+                        </>)}
                       </td>
                     </tr>
                   )
