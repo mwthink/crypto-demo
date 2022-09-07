@@ -8,6 +8,7 @@ import ModalEncrypt from './ui/ModalEncrypt';
 import ModalDecrypt from './ui/ModalDecrypt';
 import ModalSign from './ui/ModalSign';
 import ModalVerify from './ui/ModalVerify';
+import ModalHash from './ui/ModalHash';
 import * as openpgp from 'openpgp';
 
 export interface AppProps {}
@@ -162,6 +163,7 @@ export class App extends React.Component<AppProps, AppState> {
             <ModalKeyImport onImport={key => {
               this.importKey(key);
             }}/>
+            <ModalHash/>
           </div>
         )
       default:
